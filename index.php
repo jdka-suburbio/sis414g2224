@@ -1,25 +1,24 @@
 <?php
-session_start(); // Iniciar la sesión
+session_start();
 
-// Verificar si el usuario ya ha iniciado sesión
+
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     $loggedin = true;
 } else {
     $loggedin = false;
 }
 
-// Procesar el inicio de sesión
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
 
     if ($usuario === 'admin' && $contrasena === 'admin') {
-        $_SESSION['loggedin'] = true; // Establecer sesión
-        $loggedin = true; // Cambiar estado de sesión
+        $_SESSION['loggedin'] = true; 
+        $loggedin = true; 
     }
 }
 
-// Redirigir a la página de inicio de sesión si no está logueado
 if (!$loggedin) {
     ?>
     <!DOCTYPE html>
