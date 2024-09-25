@@ -5,10 +5,6 @@ $passDB = "";
 try
 {
     $conn = mysqli_connect($host, $userDB, $passDB);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    
 }
 catch(Exception $e)
 {
