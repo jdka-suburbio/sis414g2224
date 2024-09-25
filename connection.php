@@ -1,7 +1,7 @@
 <?php
-$host = "localhost";
-$userDB = "root";
-$passDB = "";
+$host = "sql106.ezyro.com";
+$userDB = "ezyro_37386388";
+$passDB = "dd30f7666b7";
 try
 {
     $conn = mysqli_connect($host, $userDB, $passDB);
@@ -10,7 +10,7 @@ try
     }
     echo "Conexión exitosa";
 
-    $dbName = "library";
+    $dbName = "ezyro_37386388_library";
     try
     {
         $db = mysqli_select_db($conn, $dbName);
